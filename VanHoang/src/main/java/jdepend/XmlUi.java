@@ -10,16 +10,16 @@ import jdepend.xmlui.*;
 
 public class XmlUi {
 	public static void main(String[] args) throws IOException {
-		runXmlUi("T:\\VanHoang\\Library-Assistant",  //directory project
-				"T:\\VanHoang\\src\\main\\resources\\report.xml", //directory export xml
-				"T:\\jdepend-ui", //directory jdepend ui
+		runXmlUi("T:\\KienTrucThietKe_week4\\Library-Assistant",  //directory project
+				"T:\\KienTrucThietKe_week4\\VanHoang\\src\\main\\resources\\report.xml", //directory export xml
+				"T:\\KienTrucThietKe_week4\\jdepend-ui", //directory jdepend ui
 				"be"); //directory package
 	}	
 
 	public static void runXmlUi(String project, String reportXml, String directoryJdependUi, String classPrefix)
 			throws IOException {
-		JDepend jdpXml = new JDepend(new PrintWriter("T:\\VanHoang\\src\\main\\resources\\report.xml"));
-		jdpXml.addDirectory("T:\\VanHoang\\Library-Assistant");
+		JDepend jdpXml = new JDepend(new PrintWriter("T:\\KienTrucThietKe_week4\\VanHoang\\src\\main\\resources\\report.xml"));
+		jdpXml.addDirectory("T:\\KienTrucThietKe_week4\\Library-Assistant");
 		jdpXml.analyze();
 		System.out.println("DONE directory report.xml saved: ");
 		System.out.print(reportXml);
